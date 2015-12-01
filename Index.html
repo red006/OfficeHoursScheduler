@@ -2,6 +2,9 @@
 <html>
 
   <head>
+    <script src="index.js"></script>
+
+
     <style>
       #classList{
         background-color: Gray;
@@ -17,9 +20,18 @@
 
       }
 
+      #teacherList{
+        position: fixed;
+        right:0;
+        margin-right: 40px;
+
+      }
+
+
       #calendar{
         display: flex;
         flex-direction: row;
+        margin-top: 60px;
       }
 
       #calendar>div{
@@ -29,21 +41,22 @@
     </style>
 
   </head>
-  <body>
+  <body bgcolor="#87CEFA" onload = "createTeacherPage()">
+    <script> testThis();</script>
     <div id = "studentName">
-      Welcome, Bryce!
+      <b>Welcome, Bryce!</b>
     </div>
-    <ul id = "classList">
-      <li>CSC 183</li>
-      <li>CSC 190</li>
-      <li>CSC 215</li>
-      <li>CSC 017</li>
+    <ul id = "teacherList" style="list-style-type:none">
+      <li><button id = "diboli" style="background-color:transparent" onclick="teacherClick('diboli')" value = "yes">Simona Diboli</button?></li>
+      <li><button id = "fu" style="background-color:transparent" onclick="teacherClick('fu')">Xiang Fu</button></li>
+      <li><button id = "liang" style="background-color:transparent" onclick="teacherClick('liang')">Chuck Liang</button></li>
+      <li><button id = "kamberova" style="background-color:transparent" onclick="teacherClick('kamberova')">Gerda Kamberova</button></li>
     </ul>
 
     <div id= "classDetails">
 
       <div id= announcements>
-        Office Hours canceled on Tuesday
+       <label id="announcementsLbl">Welcome, choose a teacher to the left to view their available office hours.</label>
       </div>
 
       <div id = calendar>
@@ -58,6 +71,14 @@
         <div>Wednesday
           <button>1pm-1:30pm</button>
           <button>1:30pm-2:00pm</button>
+        </div>
+        <div>Thursday
+          <button>2pm-2:30pm</button>
+          <button>2:30pm-3pm</button>
+        </div>
+        <div>Friday
+          <button>none</button>
+          <button>none</button>
         </div>
       </div>
 
